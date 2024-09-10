@@ -34,11 +34,26 @@
 - ### 파이프라인
 
   - 전처리를 파이프 라인을 통하여 동시에 처리하고 한번에 모델이 넣는다
+  - simpleimputer : 대체할때 사용.fillna() 도 있지만 데이터셋이 많은 경우 사용하면 좋다
 
 - ### 모델설계
 
   - 돌리고 성능평가
+
     - gridsearch나 랜덤search로 최적의 파라미터 결정
+    - param_grid에 하이퍼파라미터를 넣고
+
+      ```
+      grid_search = GridSearchCV(knn_clf, param_grid, cv=5)
+      grid_search.fit(X_train[:10_000], y_train[:10_000])
+      ```
+
+      위의 과정을 거쳐 파라미터를 찾는다.
+
+      > grid*search.best_params* : 최적의 파라미터 확인
+
+      > grid*search.best_score* : 점수확인
+
   - cv
 
 - ### 성능평가
