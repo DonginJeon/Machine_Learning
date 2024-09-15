@@ -45,7 +45,7 @@
   - 돌리고 성능평가
 
     - gridsearch나 랜덤search로 최적의 파라미터 결정
-    - param_grid에 하이퍼파라미터를 넣고
+    - param_grid에 하이퍼파라미터를 넣고(list안에 적당한 범위의 수를 넣음. 이것에 대한 학습이 필요)
 
       ```
       grid_search = GridSearchCV(knn_clf, param_grid, cv=5)
