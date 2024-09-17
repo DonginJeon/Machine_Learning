@@ -61,3 +61,6 @@
   - cv
 
 - ### 성능평가
+
+- ### 시각화
+  - plot_decision_boundary: 모델 영역에 대한 시각화 가능
